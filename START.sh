@@ -1,0 +1,1 @@
+uvicorn web:app --port 4201 --host 0.0.0.0

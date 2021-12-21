@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<link rel="stylesheet" href="/styles.css">
+
+I think my text has <input id="num_clusters" type="number" min="2" max="20" increment="1" value="3"> groups. <br />
+<button onclick="fetchAndDraw()">Send Text to Server</button><br />
+<button onclick="getMeNewColours()">Get Me New Random Colours!</button><br />
+<textarea id="user_text" columns="100" rows="5">paste your text here</textarea><br />
+<div id="coloured_text">
+  Clustered Text will appear here.
+</div>
+<div id="cluster_controls">
+  Clusters Data will appear here.
+</div>
+<div id="clicked_on_sentence"></div>
+<canvas id="myCanvas" height="600px" width="1200px"></canvas>
+<script src="/script.js"></script>
+
+</body>
+</html>

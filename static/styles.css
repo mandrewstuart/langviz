@@ -1,0 +1,14 @@
+input[type="number"] {
+    width: 50px;
+  }
+
+  button,
+  textarea,
+  div,
+  canvas {
+    margin: 10px;
+  }
+
+  #myCanvas {
+    outline: black 3px solid;
+  }
