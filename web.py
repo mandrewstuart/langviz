@@ -5,22 +5,26 @@ from starlette.routing import Route
 from starlette.responses import PlainTextResponse
 from starlette.responses import Response
 from starlette.responses import HTMLResponse
+import logging
+logging.getLogger('uvicorn').addHandler(logging.FileHandler('log.log'))
+logging.getLogger('uvicorn.access').propagate = True
 
 
+
+script = open('static/script.js', 'r').read()
+chart_html = open('static/chart.html', 'r').read()
+style_css = open('static/styles.css', 'r').read()
 
 
 async def script_route(req):
-    script = open('static/script.js', 'r').read()
     return Response(script, media_type='application/javascript')
 
 
 async def chart_route(req):
-    chart_html = open('static/chart.html', 'r').read()
     return HTMLResponse(chart_html)
 
 
 async def style_route(req):
-    style_css = open('static/styles.css', 'r').read()
     return Response(style_css, media_type='text/css')
 
 
